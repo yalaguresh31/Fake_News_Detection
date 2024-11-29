@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <title>Fake News Detection</title>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-roboto">
+<!-- Navbar -->
+<nav class="bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold hover:text-cyan-300">Fake News Detector</a>
+        <div class="space-x-4">
+            <a href="/" class="hover:text-cyan-200">Home</a>
+            <a href="/#about" class="hover:text-cyan-200">About</a>
+            <a href="/#features" class="hover:text-cyan-200">Features</a>
+            <a href="/#contact" class="hover:text-cyan-200">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 text-white py-24 text-center">
+    <div class="container mx-auto">
+        <h1 class="text-5xl font-semibold mb-4">Welcome to the Fake News Detection System</h1>
+        <p class="text-lg mb-6">Detect fake news in real-time with our powerful machine learning model. Paste any news article or URL below and get immediate results.</p>
+        <a href="/#try-section" class="bg-white text-red-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+            Try It Now
+        </a>
+    </div>
+</section>
+
+<!-- Real-Time Detection Section -->
+<section id="try-section" class="py-16 bg-gray-50">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">Try Our Real-Time Detection</h2>
+        <p class="text-lg mb-8 text-gray-600">Paste the news article or URL and let our AI-powered system analyze its authenticity.</p>
+        <form id="news-form" class="bg-white p-6 rounded-lg shadow-md max-w-xl mx-auto" method="POST" action="/prediction">
+            <label for="news-input" class="block text-gray-800 font-semibold mb-2">Enter News Article URL or Text</label>
+            <textarea id="news-input" name="news" class="w-full h-32 p-4 border border-gray-300 rounded-lg" placeholder="Paste the article here..." required></textarea>
+            <button type="submit" id="submit-btn" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg mt-4 w-full">
+                Check Authenticity
+            </button>
+        </form>
+        <div id="result" class="mt-6 hidden text-xl font-semibold text-green-600"></div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-16 bg-gradient-to-r from-yellow-100 to-yellow-200 text-center">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">About Our Detection System</h2>
+        <p class="text-lg text-gray-700 mb-6">Our fake news detection system uses advanced machine learning algorithms trained on a wide variety of data sources to assess the authenticity of news articles. It analyzes patterns, language, and context to determine whether a piece of news is true or false.</p>
+        <a href="#features" class="bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-600">Learn More</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-16 bg-gray-50 text-center">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">Key Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold text-purple-800 mb-4">Fast Analysis</h3>
+                <p class="text-gray-700">Get results in seconds with our real-time detection system that instantly analyzes news articles and URLs.</p>
+            </div>
+            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold text-green-800 mb-4">Accurate Predictions</h3>
+                <p class="text-gray-700">Our system uses a highly accurate machine learning model to predict whether news is real or fake.</p>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold text-blue-800 mb-4">Easy to Use</h3>
+                <p class="text-gray-700">Simply paste the article or URL and get instant feedback on its authenticity.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-center">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-semibold mb-6">Contact Us</h2>
+        <p class="text-lg mb-6">If you have any questions or need further assistance, feel free to reach out to us. We're here to help!</p>
+        <a href="mailto:contact@fakenews.com" class="bg-white text-cyan-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100">
+            Email Us
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-blue-600 text-white py-4 text-center">
+    <p>&copy; 2024 Fake News Detection. All Rights Reserved.</p>
+</footer>
+
+
+</body>
